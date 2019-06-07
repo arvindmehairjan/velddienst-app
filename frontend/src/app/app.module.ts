@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListsComponent } from './components/lists/lists.component';
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
+import { EmployeeService } from './employee.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,10 @@ import { EditComponent } from './components/edit/edit.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

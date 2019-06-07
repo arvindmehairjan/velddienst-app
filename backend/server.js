@@ -55,7 +55,7 @@ router.route('/employees/update/:id').post((req, res) => {
         else {
             employee.firstName = req.body.firstName;
             employee.lastName = req.body.lastName;
-            employee.id = req.body.id;
+            employee.employeeId = req.body.employeeId;
             employee.group = req.body.group;
 
             employee.save().then(employee => {

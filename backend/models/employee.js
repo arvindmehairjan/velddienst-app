@@ -9,7 +9,7 @@ let Employee = new Schema({
     lastName: {
         type: String
     },
-    id: {
+    employeeId: {
         type: Number
     },
     group: {

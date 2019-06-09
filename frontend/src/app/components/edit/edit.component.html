@@ -1,3 +1,34 @@
-<p>
-  edit works!
-</p>
+<div>
+    <br>
+    <mat-card>
+      <section class="mat-typography">
+        <h3>Update Employee</h3>
+      </section>
+      <mat-divider></mat-divider>
+        <br>
+        <form [formGroup]="updateForm" class="edit-form">
+          <mat-form-field class="field-full-width">
+            <input matInput placeholder="First name" formControlName="firstName" #firstName>
+          </mat-form-field>
+          <mat-form-field class="field-full-width">
+            <input matInput placeholder="Last name" formControlName="lastName" #lastName>
+          </mat-form-field>
+          <mat-form-field class="field-full-width">
+            <textarea matInput placeholder="Employee ID" formControlName="employeeId" #employeeId></textarea>
+          </mat-form-field>
+          <mat-form-field class="field-full-width">
+            <mat-select placeholder="Group" formControlName="group" #group>
+              <mat-option value="1">1</mat-option>
+              <mat-option value="2">2</mat-option>
+              <mat-option value="3">3</mat-option>
+              <mat-option value="4">4</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-divider></mat-divider>
+          <br><br>
+          <button mat-raised-button color="accent" routerLink="/lists">Back</button>
+          <button type="submit" (click)="updateEmployee(firstName.value, lastName.value, employeeId.value, group.value)" [disabled]="updateForm.pristine || updateForm.invalid" mat-raised-button color="primary">
+            Save</button>
+        </form>
+    </mat-card>
+  </div>

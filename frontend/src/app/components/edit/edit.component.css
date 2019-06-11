@@ -6,3 +6,10 @@
 .field-full-width {
   width: 100%;
 }
+
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+  margin-left: 20px;
+}

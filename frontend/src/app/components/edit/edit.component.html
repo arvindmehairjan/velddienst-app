@@ -14,7 +14,7 @@
             <input matInput placeholder="Last name" formControlName="lastName" #lastName>
           </mat-form-field>
           <mat-form-field class="field-full-width">
-            <textarea matInput placeholder="Employee ID" formControlName="employeeId" #employeeId></textarea>
+            <input type="number" matInput placeholder="Employee ID" formControlName="employeeId" #employeeId>
           </mat-form-field>
           <mat-form-field class="field-full-width">
             <mat-select placeholder="Group" formControlName="group" #group>
@@ -22,13 +22,17 @@
               <mat-option value="2">2</mat-option>
               <mat-option value="3">3</mat-option>
               <mat-option value="4">4</mat-option>
+              <mat-option value="5">5</mat-option>
+              <mat-option value="6">6</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-divider></mat-divider>
           <br><br>
           <button mat-raised-button color="accent" routerLink="/lists">Back</button>
-          <button type="submit" (click)="updateEmployee(firstName.value, lastName.value, employeeId.value, group.value)" [disabled]="updateForm.pristine || updateForm.invalid" mat-raised-button color="primary">
-            Save</button>
+          <div class="divider">
+            <button type="submit" routerLink="/lists" (click)="updateEmployee(firstName.value, lastName.value, employeeId.value, group.value)" [disabled]="updateForm.pristine || updateForm.invalid" mat-raised-button color="primary">
+              Update</button>
+          </div>
         </form>
     </mat-card>
   </div>

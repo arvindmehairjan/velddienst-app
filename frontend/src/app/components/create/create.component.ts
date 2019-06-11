@@ -17,8 +17,8 @@ export class CreateComponent implements OnInit {
     this.createForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      employeeId: '',
-      group: ''
+      employeeId: ['', Validators.required],
+      group: ['', Validators.required]
     });
   }
 

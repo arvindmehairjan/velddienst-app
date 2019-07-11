@@ -55,8 +55,16 @@ router.route('/employees/update/:id').post((req, res) => {
         else {
             employee.firstName = req.body.firstName;
             employee.lastName = req.body.lastName;
+            employee.address = req.body.address;
+            employee.telephone = req.body.telephone;
+            employee.email = req.body.email;
             employee.employeeId = req.body.employeeId;
             employee.group = req.body.group;
+            employee.verspreiding = req.body.verspreiding;
+            employee.film = req.body.film;
+            employee.nabezoek = req.body.nabezoek;
+            employee.bijbelstudie = req.body.bijbelstudie;
+            employee.overige = req.body.overige;
 
             employee.save().then(employee => {
                 res.json('Update done');

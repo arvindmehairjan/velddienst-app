@@ -9,11 +9,35 @@ let Employee = new Schema({
     lastName: {
         type: String
     },
+    address: {
+        type: String
+    },
+    telephone: {
+        type: Number
+    },
+    email: {
+        type: String
+    },
     employeeId: {
         type: Number
     },
     group: {
         type: Number
+    },
+    verspreiding: {
+        type: Number
+    },
+    film: {
+        type: Number
+    },
+    nabezoek: {
+        type: Number
+    },
+    bijbelstudie: {
+        type: Number
+    },
+    overige: {
+        type: String
     }
 });
 

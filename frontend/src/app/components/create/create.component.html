@@ -7,15 +7,31 @@
     <mat-divider></mat-divider>
       <br>
       <form [formGroup]="createForm" class="create-form">
+
         <mat-form-field class="field-full-width">
           <input matInput placeholder="First name" formControlName="firstName" #firstName>
         </mat-form-field>
+
         <mat-form-field class="field-full-width">
           <input matInput placeholder="Last name" formControlName="lastName" #lastName>
         </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input matInput placeholder="Address" formControlName="address" #address>
+          </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input type="number" matInput placeholder="Telephone" formControlName="telephone" #telephone>
+        </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input matInput placeholder="email address" formControlName="email" #email>
+        </mat-form-field>
+
         <mat-form-field class="field-full-width">
           <input type="number" matInput placeholder="Employee ID" formControlName="employeeId" #employeeId>
         </mat-form-field>
+
         <mat-form-field class="field-full-width">
           <mat-select placeholder="Group" formControlName="group" #group>
             <mat-option value="1">1</mat-option>
@@ -26,11 +42,34 @@
             <mat-option value="6">6</mat-option>
           </mat-select>
         </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input type="number" matInput placeholder="Verspreiding" formControlName="verspreiding" #verspreiding>
+          </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input type="number" matInput placeholder="Film" formControlName="film" #film>
+          </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+           <input type="number" matInput placeholder="Nabezoek" formControlName="nabezoek" #nabezoek>
+         </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input type="number" matInput placeholder="Bijbelstudie" formControlName="bijbelstudie" #bijbelstudie>
+          </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+            <input matInput placeholder="Overige" formControlName="overige" #overige>
+        </mat-form-field>
+
         <mat-divider></mat-divider>
         <br><br>
         <button mat-raised-button color="accent" routerLink="/lists">Back</button>
         <div class="divider">
-          <button type="submit" (click)="addEmployee(firstName.value, lastName.value, employeeId.value, group.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary">
+          <button type="submit" (click)="addEmployee(firstName.value, lastName.value, address.value, telephone.value, email.value, employeeId.value,
+           group.value, verspreiding.value, film.value, nabezoek.value, bijbelstudie.value, overige.value  )"
+           [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary">
             Save</button>
         </div>
       </form>

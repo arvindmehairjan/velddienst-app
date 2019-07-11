@@ -17,13 +17,22 @@ export class CreateComponent implements OnInit {
     this.createForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
+      address: ['', Validators.required],
+      telephone: ['', Validators.required],
+      email: ['', Validators.required],
       employeeId: ['', Validators.required],
-      group: ['', Validators.required]
+      group: ['', Validators.required],
+      verspreiding: ['', Validators.required],
+      film: ['', Validators.required],
+      nabezoek: ['', Validators.required],
+      bijbelstudie: ['', Validators.required],
+      overige: ['', Validators.required]
     });
   }
 
-  addEmployee(firstName, lastName, employeeId, group) {
-    this.employeeService.addEmployee(firstName, lastName, employeeId, group).subscribe(() => {
+  addEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, overige) {
+    this.employeeService.addEmployee(firstName, lastName, address, telephone, email, employeeId,
+       group, verspreiding, film, nabezoek, bijbelstudie, overige).subscribe(() => {
       this.router.navigate(['/lists']);
     });
   }

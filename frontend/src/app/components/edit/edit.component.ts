@@ -24,8 +24,16 @@ export class EditComponent implements OnInit {
     this.updateForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
+      address: '',
+      telephone: '',
+      email: '',
       employeeId: '',
-      group: ''
+      group: '',
+      verspreiding: '',
+      film: '',
+      nabezoek: '',
+      bijbelstudie: '',
+      overige: ''
     });
    }
 
@@ -36,14 +44,25 @@ export class EditComponent implements OnInit {
         this.employee = res;
         this.updateForm.get('firstName').setValue(this.employee.firstName);
         this.updateForm.get('lastName').setValue(this.employee.lastName);
+        this.updateForm.get('address').setValue(this.employee.address);
+        this.updateForm.get('telephone').setValue(this.employee.telephone);
+        this.updateForm.get('email').setValue(this.employee.email);
         this.updateForm.get('employeeId').setValue(this.employee.employeeId);
         this.updateForm.get('group').setValue(this.employee.group);
+        this.updateForm.get('verspreiding').setValue(this.employee.verspreiding);
+        this.updateForm.get('film').setValue(this.employee.film);
+        this.updateForm.get('nabezoek').setValue(this.employee.nabezoek);
+        this.updateForm.get('bijbelstudie').setValue(this.employee.bijbelstudie);
+        this.updateForm.get('overige').setValue(this.employee.overige);
       });
     });
   }
 
-  updateEmployee(firstName, lastName, employeeId, group) {
-    this.employeeService.updateEmployee(this.id, firstName, lastName, employeeId, group).subscribe(() => {
+  updateEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding,
+     film, nabezoek, bijbelstudie, overige) {
+    this.employeeService.updateEmployee(this.id, firstName, lastName, address, telephone,
+       email, employeeId, group, verspreiding, film, nabezoek,
+       bijbelstudie, overige ).subscribe(() => {
       this.snackBar.open('Employee updated succesfully', 'OK', {
         duration: 3000
       });

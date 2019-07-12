@@ -8,6 +8,7 @@
     <mat-divider></mat-divider>
     <br>
     <table mat-table [dataSource]="employees">
+
       <ng-container matColumnDef="firstName">
         <th mat-header-cell *matHeaderCellDef>First Name</th>
         <td mat-cell *matCellDef="let element"> {{element.firstName}}</td>
@@ -18,6 +19,21 @@
         <td mat-cell *matCellDef="let element"> {{element.lastName}}</td>
       </ng-container>
 
+      <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef>Address</th>
+          <td mat-cell *matCellDef="let element"> {{element.address}}</td>
+        </ng-container>
+
+      <ng-container matColumnDef="telephone">
+           <th mat-header-cell *matHeaderCellDef>Telephone</th>
+          <td mat-cell *matCellDef="let element"> {{element.telephone}}</td>
+        </ng-container>
+
+       <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+         <td mat-cell *matCellDef="let element"> {{element.email}}</td>
+       </ng-container>
+
       <ng-container matColumnDef="employeeId">
         <th mat-header-cell *matHeaderCellDef>Employee ID</th>
         <td mat-cell *matCellDef="let element"> {{element.employeeId}}</td>
@@ -27,6 +43,31 @@
         <th mat-header-cell *matHeaderCellDef>Group</th>
         <td mat-cell *matCellDef="let element"> {{element.group}}</td>
       </ng-container>
+
+      <ng-container matColumnDef="verspreiding">
+          <th mat-header-cell *matHeaderCellDef>Verspreiding</th>
+          <td mat-cell *matCellDef="let element"> {{element.verspreiding}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="film">
+          <th mat-header-cell *matHeaderCellDef>Film</th>
+          <td mat-cell *matCellDef="let element"> {{element.film}}</td>
+       </ng-container>
+
+      <ng-container matColumnDef="nabezoek">
+          <th mat-header-cell *matHeaderCellDef>Nabezoek</th>
+          <td mat-cell *matCellDef="let element"> {{element.nabezoek}}</td>
+       </ng-container>
+
+      <ng-container matColumnDef="bijbelstudie">
+          <th mat-header-cell *matHeaderCellDef>Bijbelstudie</th>
+          <td mat-cell *matCellDef="let element"> {{element.bijbelstudie}}</td>
+       </ng-container>
+
+      <ng-container matColumnDef="overige">
+          <th mat-header-cell *matHeaderCellDef>Overige</th>
+          <td mat-cell *matCellDef="let element"> {{element.overige}}</td>
+       </ng-container>
 
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef class="mat-column-right">Actions</th>

@@ -24,16 +24,16 @@ export class EditComponent implements OnInit {
     this.updateForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      address: '',
-      telephone: '',
-      email: '',
-      employeeId: '',
-      group: '',
-      verspreiding: '',
-      film: '',
-      nabezoek: '',
-      bijbelstudie: '',
-      overige: ''
+      address: ['', Validators.required],
+      telephone: ['', Validators.required],
+      email: ['', Validators.required],
+      employeeId: ['', Validators.required],
+      group: ['', Validators.required],
+      verspreiding: ['', Validators.required],
+      film: ['', Validators.required],
+      nabezoek: ['', Validators.required],
+      bijbelstudie: ['', Validators.required],
+      overige: ['', Validators.required]
     });
    }
 

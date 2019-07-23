@@ -12,11 +12,12 @@ import { Employee } from '../../employee.model';
 })
 export class EditComponent implements OnInit {
 
-  id: String;
+  id: any;
   employee: any = {};
   updateForm: FormGroup;
 
-  constructor(private employeeService: EmployeeService, private router: Router, private route: ActivatedRoute, private snackBar: MatSnackBar, private fb: FormBuilder) {
+  constructor(private employeeService: EmployeeService, private router: Router,
+    private route: ActivatedRoute, private snackBar: MatSnackBar, private fb: FormBuilder) {
     this.createForm();
    }
 
@@ -56,6 +57,7 @@ export class EditComponent implements OnInit {
         this.updateForm.get('overige').setValue(this.employee.overige);
       });
     });
+
   }
 
   updateEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding,

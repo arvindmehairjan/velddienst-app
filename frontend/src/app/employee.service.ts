@@ -36,7 +36,8 @@ export class EmployeeService {
     return this.http.post(`${this.url}/employees/add`, employee);
   }
 
-  updateEmployee(id, firstName, lastName, address, telephone, email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, overige) {
+  updateEmployee(id, firstName, lastName, address, telephone,
+     email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, overige) {
     const employee = {
       firstName: firstName,
       lastName: lastName,

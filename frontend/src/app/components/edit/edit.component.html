@@ -25,7 +25,7 @@
           </mat-form-field>
 
           <mat-form-field class="field-full-width">
-              <input matInput placeholder="email address" formControlName="email" #email>
+              <input matInput placeholder="Email Address" formControlName="email" #email>
           </mat-form-field>
 
           <mat-form-field class="field-full-width">
@@ -67,7 +67,8 @@
           <br><br>
           <button mat-raised-button color="accent" routerLink="/lists">Back</button>
           <div class="divider">
-            <button type="submit" routerLink="/lists" (click)="updateEmployee(firstName.value, lastName.value, employeeId.value, group.value)" [disabled]="updateForm.pristine || updateForm.invalid" mat-raised-button color="primary">
+            <button type="submit" routerLink="/lists" (click)="updateEmployee(firstName.value, lastName.value, address.value, telephone.value, email.value, employeeId.value,
+            group.value, verspreiding.value, film.value, nabezoek.value, bijbelstudie.value, overige.value)" [disabled]="updateForm.pristine || updateForm.invalid" mat-raised-button color="primary">
               Update</button>
           </div>
         </form>

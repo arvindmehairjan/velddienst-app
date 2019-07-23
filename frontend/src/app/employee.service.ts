@@ -18,7 +18,7 @@ export class EmployeeService {
     return this.http.get(`${this.url}/employees/${id}`);
   }
 
-  addEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, overige) {
+  addEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, maand, overige) {
     const employee = {
       firstName: firstName,
       lastName: lastName,
@@ -31,13 +31,14 @@ export class EmployeeService {
       film: film,
       nabezoek: nabezoek,
       bijbelstudie: bijbelstudie,
+      maand: maand,
       overige: overige
     };
     return this.http.post(`${this.url}/employees/add`, employee);
   }
 
   updateEmployee(id, firstName, lastName, address, telephone,
-     email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, overige) {
+     email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, maand, overige) {
     const employee = {
       firstName: firstName,
       lastName: lastName,
@@ -50,6 +51,7 @@ export class EmployeeService {
       film: film,
       nabezoek: nabezoek,
       bijbelstudie: bijbelstudie,
+      maand: maand,
       overige: overige
     };
     return this.http.post(`${this.url}/employees/update/${id}`, employee);

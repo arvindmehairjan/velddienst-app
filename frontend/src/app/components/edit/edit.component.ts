@@ -34,6 +34,7 @@ export class EditComponent implements OnInit {
       film: ['', Validators.required],
       nabezoek: ['', Validators.required],
       bijbelstudie: ['', Validators.required],
+      maand: ['', Validators.required],
       overige: ['', Validators.required]
     });
    }
@@ -54,6 +55,7 @@ export class EditComponent implements OnInit {
         this.updateForm.get('film').setValue(this.employee.film);
         this.updateForm.get('nabezoek').setValue(this.employee.nabezoek);
         this.updateForm.get('bijbelstudie').setValue(this.employee.bijbelstudie);
+        this.updateForm.get('maand').setValue(this.employee.maand);
         this.updateForm.get('overige').setValue(this.employee.overige);
       });
     });
@@ -61,10 +63,10 @@ export class EditComponent implements OnInit {
   }
 
   updateEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding,
-     film, nabezoek, bijbelstudie, overige) {
+     film, nabezoek, bijbelstudie, maand, overige) {
     this.employeeService.updateEmployee(this.id, firstName, lastName, address, telephone,
        email, employeeId, group, verspreiding, film, nabezoek,
-       bijbelstudie, overige ).subscribe(() => {
+       bijbelstudie, maand, overige ).subscribe(() => {
       this.snackBar.open('Employee updated succesfully', 'OK', {
         duration: 3000
       });

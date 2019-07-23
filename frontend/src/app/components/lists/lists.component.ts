@@ -13,7 +13,7 @@ export class ListsComponent implements OnInit {
 
   employees: Employee[];
   displayedColumns = ['firstName', 'lastName', 'address', 'telephone', 'email', 'employeeId', 'group',
-   'verspreiding', 'film', 'nabezoek', 'bijbelstudie', 'overige', 'actions'];
+   'verspreiding', 'film', 'nabezoek', 'bijbelstudie', 'maand', 'overige', 'actions'];
 
   constructor(private employeeService: EmployeeService, private router: Router) { }
 

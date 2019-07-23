@@ -64,6 +64,11 @@
           <td mat-cell *matCellDef="let element"> {{element.bijbelstudie}}</td>
        </ng-container>
 
+       <ng-container matColumnDef="maand">
+        <th mat-header-cell *matHeaderCellDef>Maand</th>
+        <td mat-cell *matCellDef="let element"> {{element.maand}}</td>
+     </ng-container>
+
       <ng-container matColumnDef="overige">
           <th mat-header-cell *matHeaderCellDef>Overige</th>
           <td mat-cell *matCellDef="let element"> {{element.overige}}</td>

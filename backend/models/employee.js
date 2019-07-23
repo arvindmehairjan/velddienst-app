@@ -36,6 +36,9 @@ let Employee = new Schema({
     bijbelstudie: {
         type: Number
     },
+    maand: {
+        type: String
+    },
     overige: {
         type: String
     }

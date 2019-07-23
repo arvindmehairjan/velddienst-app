@@ -59,6 +59,12 @@
             <input type="number" matInput placeholder="Bijbelstudie" formControlName="bijbelstudie" #bijbelstudie>
           </mat-form-field>
 
+          <mat-form-field class="field-full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="maand" #maand>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
         <mat-form-field class="field-full-width">
             <input matInput placeholder="Overige" formControlName="overige" #overige>
         </mat-form-field>
@@ -68,7 +74,7 @@
         <button mat-raised-button color="accent" routerLink="/lists">Back</button>
         <div class="divider">
           <button type="submit" (click)="addEmployee(firstName.value, lastName.value, address.value, telephone.value, email.value, employeeId.value,
-           group.value, verspreiding.value, film.value, nabezoek.value, bijbelstudie.value, overige.value  )"
+           group.value, verspreiding.value, film.value, nabezoek.value, bijbelstudie.value, maand.value, overige.value  )"
            [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary">
             Save</button>
         </div>

@@ -11,5 +11,6 @@ export interface Employee {
   film: Number;
   nabezoek: Number;
   bijbelstudie: Number;
+  maand: String;
   overige: String;
 }

@@ -64,6 +64,7 @@ router.route('/employees/update/:id').post((req, res) => {
             employee.film = req.body.film;
             employee.nabezoek = req.body.nabezoek;
             employee.bijbelstudie = req.body.bijbelstudie;
+            employee.maand = req.body.maand;
             employee.overige = req.body.overige;
 
             employee.save().then(employee => {

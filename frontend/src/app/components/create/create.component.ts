@@ -26,13 +26,14 @@ export class CreateComponent implements OnInit {
       film: ['', Validators.required],
       nabezoek: ['', Validators.required],
       bijbelstudie: ['', Validators.required],
+      maand: ['', Validators.required],
       overige: ['', Validators.required]
     });
   }
 
-  addEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, overige) {
+  addEmployee(firstName, lastName, address, telephone, email, employeeId, group, verspreiding, film, nabezoek, bijbelstudie, maand, overige) {
     this.employeeService.addEmployee(firstName, lastName, address, telephone, email, employeeId,
-       group, verspreiding, film, nabezoek, bijbelstudie, overige).subscribe(() => {
+       group, verspreiding, film, nabezoek, bijbelstudie, maand, overige).subscribe(() => {
       this.router.navigate(['/lists']);
     });
   }

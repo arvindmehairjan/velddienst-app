@@ -87,5 +87,8 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
     </table>
+
+    <button (click)="exportAs('xlsx')">export as Ms-Excel</button>
+
   </mat-card>
 </div>

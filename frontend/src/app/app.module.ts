@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+import { ExportAsModule } from 'ngx-export-as';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MatNativeDateModule } from '@angular/material';
     ReactiveFormsModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    ExportAsModule
   ],
   providers: [EmployeeService, MatDatepickerModule],
   bootstrap: [AppComponent]

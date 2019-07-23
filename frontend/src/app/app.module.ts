@@ -40,7 +40,7 @@ import { MatNativeDateModule } from '@angular/material';
     MatSnackBarModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
   ],
   providers: [EmployeeService, MatDatepickerModule],
   bootstrap: [AppComponent]
